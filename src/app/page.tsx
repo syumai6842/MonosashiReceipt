@@ -17,7 +17,7 @@ export default function Home() {
             ゲームを始める
           </Link>
           <p className="text-sm text-white/70">
-            31枚の価値観カードから4つを選んで、あなただけの哲学者を見つけましょう
+            30枚の価値観カードから4つを選んで、あなただけの哲学者を見つけましょう
           </p>
         </div>
       </div>

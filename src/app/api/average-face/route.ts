@@ -21,3 +21,4 @@ export async function POST(req: NextRequest) {
 		headers: { "Content-Type": "image/png" },
 	});
 }
+
