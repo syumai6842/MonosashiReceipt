@@ -19,7 +19,7 @@ function ItemDroppable({ list, id, children }: { list: "kept" | "discarded"; id:
 }
 
 export default function ReceiptPage() {
-	const { hand, discardedIds, all, moveBetweenLists, swapBetweenLists } = useGameStore();
+	const { hand, discardedIds, all, swapBetweenLists } = useGameStore();
 
 	const kept = useMemo(() => hand, [hand]);
 	const discarded = useMemo(() => discardedIds, [discardedIds]);

@@ -10,3 +10,4 @@ export async function generateAverageFace(words: string[]): Promise<Blob> {
 	return await res.blob();
 }
 
+

@@ -13,6 +13,7 @@ export default function FacePage() {
 	const [error, setError] = useState<string | null>(null);
 	const [loading, setLoading] = useState(false);
 
+	const wordsString = words.join(",");
 	const run = useCallback(async () => {
 		setLoading(true);
 		setError(null);
@@ -22,19 +23,22 @@ export default function FacePage() {
 				if (prev) URL.revokeObjectURL(prev);
 				return URL.createObjectURL(blob);
 			});
-		} catch (e: any) {
-			setError(e?.message || "生成に失敗しました");
+		} catch (e: unknown) {
+			setError(e instanceof Error ? e.message : "生成に失敗しました");
 		} finally {
 			setLoading(false);
 		}
-	}, [words.join(",")]);
+	}, [words, wordsString]);
 
 	useEffect(() => {
 		run();
+	}, [run]);
+
+	useEffect(() => {
 		return () => {
 			if (url) URL.revokeObjectURL(url);
 		};
-	}, [run]);
+	}, [url]);
 
 	return (
 		<div className="min-h-screen bg-[#4b3f3f] text-white flex flex-col items-center px-4 py-6">
