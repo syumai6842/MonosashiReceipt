@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 import { createDeck, draw, Deck } from "@/lib/deck";
 
 export type ValueCard = { id: string; label: string };
@@ -20,7 +21,9 @@ type GameState = {
 	swapBetweenLists: (from: "kept" | "discarded", to: "kept" | "discarded", draggedId: string, targetId: string) => void;
 };
 
-export const useGameStore = create<GameState>((set, get) => ({
+export const useGameStore = create<GameState>()(
+	persist(
+		(set, get) => ({
 	seed: "",
 	deck: null,
 	hand: [],
@@ -140,4 +143,18 @@ export const useGameStore = create<GameState>((set, get) => ({
 			set({ hand: newHand, discardedIds: newDiscarded });
 		}
 	},
-}));
+		}),
+		{
+			name: "receipt-game-storage",
+			partialize: (state) => ({
+				seed: state.seed,
+				deck: state.deck,
+				hand: state.hand,
+				incoming: state.incoming,
+				all: state.all,
+				discardedIds: state.discardedIds,
+				status: state.status,
+			}),
+		}
+	)
+);
