@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
 	// 各単語に対応する哲学者を取得
 	const referencedPhilosophers = words
 		.map(word => {
-			const valueData = valuesData.find((v: any) => v.label === word);
+			const valueData = valuesData.find((v: { label: string; philosophers: string[] }) => v.label === word);
 			return valueData ? valueData.philosophers : ["Socrates"];
 		})
 		.flat()

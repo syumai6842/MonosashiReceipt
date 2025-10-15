@@ -13,7 +13,6 @@ export default function FacePage() {
 	const [error, setError] = useState<string | null>(null);
 	const [loading, setLoading] = useState(false);
 
-	const wordsString = words.join(",");
 	const run = useCallback(async () => {
 		setLoading(true);
 		setError(null);
