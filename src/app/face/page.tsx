@@ -28,7 +28,7 @@ export default function FacePage() {
 		} finally {
 			setLoading(false);
 		}
-	}, [words, wordsString]);
+	}, [words]);
 
 	useEffect(() => {
 		run();

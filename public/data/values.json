@@ -1,32 +1,77 @@
 [
-  { "id": "jiyuu", "label": "自由" },
-  { "id": "kiritsu", "label": "規律" },
-  { "id": "ai", "label": "愛" },
-  { "id": "yuuki", "label": "勇気" },
-  { "id": "shiawase", "label": "幸せ" },
-  { "id": "byoudou", "label": "平等" },
-  { "id": "sekinin", "label": "責任" },
-  { "id": "nakama", "label": "仲間" },
-  { "id": "seijitsu", "label": "誠実" },
-  { "id": "shinjitsu", "label": "真実" },
-  { "id": "shizen", "label": "自然" },
-  { "id": "henka", "label": "変化" },
-  { "id": "kibou", "label": "希望" },
-  { "id": "asobi", "label": "遊び" },
-  { "id": "shinnen", "label": "信念" },
-  { "id": "hokori", "label": "誇り" },
-  { "id": "songen", "label": "尊厳" },
-  { "id": "kansha", "label": "感謝" },
-  { "id": "doryoku", "label": "努力" },
-  { "id": "manabi", "label": "学び" },
-  { "id": "shinrai", "label": "信頼" },
-  { "id": "souzou", "label": "創造" },
-  { "id": "heiwa", "label": "平和" },
-  { "id": "jiritsu", "label": "自立" },
-  { "id": "kinben", "label": "勤勉" },
-  { "id": "kosei", "label": "個性" },
-  { "id": "kyouchou", "label": "協調" },
-  { "id": "risei", "label": "理性" },
-  { "id": "kanjou", "label": "感情" },
-  { "id": "kousei", "label": "公正" }
+  {
+    "id": "jiyuu",
+    "label": "自由",
+    "philosophers": ["Sartre", "Mill", "Rousseau"]
+  },
+  {
+    "id": "ai",
+    "label": "愛",
+    "philosophers": ["Plato", "Saint Augustine", "Fromm"]
+  },
+  {
+    "id": "shiawase",
+    "label": "幸せ",
+    "philosophers": ["Aristotle", "Epicurus", "Bentham"]
+  },
+  {
+    "id": "sekinin",
+    "label": "責任",
+    "philosophers": ["Kant", "Levinas", "Sartre"]
+  },
+  {
+    "id": "seijitsu",
+    "label": "誠実",
+    "philosophers": ["Socrates", "Kant", "Confucius"]
+  },
+  {
+    "id": "yuuki",
+    "label": "勇気",
+    "philosophers": ["Aristotle", "Marcus Aurelius", "Camus"]
+  },
+  {
+    "id": "shinrai",
+    "label": "信頼",
+    "philosophers": ["Hobbes", "Locke", "Rousseau"]
+  },
+  {
+    "id": "jiritsu",
+    "label": "自立",
+    "philosophers": ["Kant", "Emerson", "Nietzsche"]
+  },
+  {
+    "id": "kosei",
+    "label": "個性",
+    "philosophers": ["Nietzsche", "Kierkegaard", "Emerson"]
+  },
+  {
+    "id": "kansha",
+    "label": "感謝",
+    "philosophers": ["Seneca", "Epicurus", "Marcus Aurelius"]
+  },
+  {
+    "id": "doryoku",
+    "label": "努力",
+    "philosophers": ["Aristotle", "Confucius", "Nietzsche"]
+  },
+  {
+    "id": "souzou",
+    "label": "創造",
+    "philosophers": ["Bergson", "Nietzsche", "Dewey"]
+  },
+  {
+    "id": "manabi",
+    "label": "学び",
+    "philosophers": ["Socrates", "Plato", "Confucius"]
+  },
+  {
+    "id": "hokori",
+    "label": "誇り",
+    "philosophers": ["Aristotle", "Nietzsche", "Rousseau"]
+  },
+  {
+    "id": "shinnen",
+    "label": "信念",
+    "philosophers": ["Kierkegaard", "Nietzsche", "Camus"]
+  }
 ]

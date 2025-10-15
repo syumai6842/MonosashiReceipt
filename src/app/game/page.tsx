@@ -86,7 +86,7 @@ export default function GamePage() {
 							))}
 						</div>
 
-						<p className="text-center mt-6 text-white/90">一つ選んで捨ててください</p>
+						<p className="text-center mt-6 text-white/90">カードを下にスワイプして捨ててください</p>
 
 						<DroppableTrash id="trash" />
 

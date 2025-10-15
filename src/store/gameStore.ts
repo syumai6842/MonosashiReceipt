@@ -2,7 +2,11 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { createDeck, draw, Deck } from "@/lib/deck";
 
-export type ValueCard = { id: string; label: string };
+export type ValueCard = { 
+	id: string; 
+	label: string;
+	philosophers: string[];
+};
 
 type GameState = {
 	seed: string;

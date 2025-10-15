@@ -9,11 +9,11 @@ export default function DroppableTrash({ id }: Props) {
 	return (
 		<div
 			ref={setNodeRef}
-			className={`fixed left-0 right-0 bottom-0 h-[64px] flex items-center justify-center shadow-2xl transition-colors ${
+			className={`fixed left-0 right-0 bottom-0 h-[96px] flex items-center justify-center shadow-2xl transition-colors ${
 				isOver ? "bg-[#ff6b6b]" : "bg-[#f24b4b]"
 			}`}
 		>
-			<span className="material-symbols-outlined text-white text-[32px]">delete</span>
+			<span className="material-symbols-outlined text-white text-4xl" style={{ fontFamily: 'Material Symbols Outlined' }}>delete</span>
 		</div>
 	);
 }
