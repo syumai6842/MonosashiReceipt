@@ -1,4 +1,6 @@
 import { NextRequest } from "next/server";
+import fs from 'fs';
+import path from 'path';
 
 export async function POST(req: NextRequest) {
 	let apiKey = process.env.OPENAI_API_KEY;
@@ -19,11 +21,12 @@ export async function POST(req: NextRequest) {
 	// values.jsonから価値観データを取得
 	let valuesData;
 	try {
-		const valuesResponse = await fetch(`${process.env.NEXTAUTH_URL || 'http://localhost:3000'}/data/values.json`);
-		valuesData = await valuesResponse.json();
+		const valuesPath = path.join(process.cwd(), 'public', 'data', 'values.json');
+		const valuesFile = fs.readFileSync(valuesPath, 'utf8');
+		valuesData = JSON.parse(valuesFile);
 	} catch (error) {
-		console.error("Failed to fetch values data:", error);
-		return new Response("Failed to fetch values data", { status: 500 });
+		console.error("Failed to read values data:", error);
+		return new Response("Failed to read values data", { status: 500 });
 	}
 
 	// 各単語に対応する哲学者を取得
