@@ -42,6 +42,9 @@ export default function ReceiptPage() {
 		<div className="min-h-screen bg-[#4b3f3f] text-white px-4 py-6">
 			<h1 className="text-2xl font-bold mb-4 text-center">レシート</h1>
 			<DndContext onDragEnd={onDragEnd}>
+				<p className="mt-4 text-sm text-white/70 text-center leading-relaxed">
+					キーワードを入れ替えると、生成される顔も変わります。
+				</p>
 				<div className="flex flex-col gap-6">
 					<SectionBox>
 						<h2 className="font-semibold mb-2">残した4つ</h2>
